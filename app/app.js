@@ -4,9 +4,17 @@
 {
     var bookscontroller = function($scope){
 
-        $scope.message = "Books contoller Block";
-       
-        this.greeting = "Welcome...!!!!";
+        $scope.obj = {
+             message: 'Books contoller Block'
+            };
+        $scope.countries = [
+            "India",
+            "Australia",
+            "Japan",
+            "Sri Lanka",
+            "USA"
+        ];
+
 
         $scope.books = [];
 
@@ -18,12 +26,11 @@
                  { Id: 4, BookName: "Book4", AuthorName: "Author4" },
                  { Id: 5, BookName: "Book5", AuthorName: "Author5" },
             ]
-        }
-    }
+        }    
+}
     var app = angular.module('myAngularApplication',[]);
     app.controller('booksController',bookscontroller);
-    
-
+//var app1 = angular.module('myAngularApplication',[]);
 }());
 
 //CreateModule();

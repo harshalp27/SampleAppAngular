@@ -6,12 +6,13 @@
 		<script src = "app/book/booksController.js"></script>
     </head>
     <body ng-controller="booksController as ctrl">
-		{{message}}
+       		{{message}}
         </br>
         {{ctrl.greeting}}
         <br><br>
         <input type ="button" ng-click="showBooks()" value = "Show Books">
         <br><br><br>
+       Select Country: <select ng-model = "countriesSelected" ng-options = "x for x in countries"></select>
         <table style="width:50%">
             <tr>
                 <th>ID</th>
@@ -23,6 +24,6 @@
                 <td>{{book.BookName}}</td>
                 <td>{{book.AuthorName}}</td>
             </tr>
-        </table>    
+        </table>
     </body>
 </html>
